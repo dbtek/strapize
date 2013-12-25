@@ -1,0 +1,33 @@
+.container {
+    margin-top: 50px;
+}
+
+.billboard {
+    background-color: #2980b9;
+    background: -webkit-linear-gradient(30deg, #e74c3c 20%, #2980b9 67%, #2c3e50 100%);
+    background: -o-linear-gradient(30deg, #e74c3c 20%, #2980b9 67%, #2c3e50 100%);
+    background: -ms-linear-gradient(30deg, #e74c3c 20%, #2980b9 67%, #2c3e50 100%);
+    background: -moz-linear-gradient(30deg, #e74c3c 20%, #2980b9 67%, #2c3e50 100%);
+    background: linear-gradient(30deg, #e74c3c 20%, #2980b9 67%, #2c3e50 100%);
+    background-attachment: fixed;
+    padding: 6em 0 8em;
+    color: #fff;
+    text-align: center
+}
+
+.navbar-strapize {
+    background: #2B5270;
+    border-bottom: none;
+}
+
+.navbar-strapize a {
+    color: white !important;
+}
+
+.navbar-strapize .navbar-brand {
+    background: url(/assets/strapize-logo-type.png);   
+    background-repeat: no-repeat;
+    width: 104px;
+    margin: 8px 10px 0;
+    height: 40px;
+}

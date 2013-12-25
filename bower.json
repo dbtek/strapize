@@ -1,0 +1,26 @@
+{
+  "name": "strapize-ng",
+  "version": "0.0.1",
+  "authors": [
+    "Ismail Demirbilek <ce.demirbilek@gmail.com>"
+  ],
+  "description": "Bootstrap theme customizer",
+  "keywords": [
+    "bootstrap",
+    "theme",
+    "customize"
+  ],
+  "license": "MIT",
+  "homepage": "strapize.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.6",
+    "bootstrap": "~3.0.3"
+  }
+}

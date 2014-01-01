@@ -1,23 +1,8 @@
-<script src="/scripts/controllers/ThemeCtrl.js"></script>
+<link href="/bower_components/bootstrap/less/bootstrap.less" rel="stylesheet/less"/>
+<link href="http://bootswatch.com/{{theme}}/variables.less" rel="stylesheet/less"/>
+
 <div ng-controller="ThemeCtrl">
-    <link href="/bower_components/bootstrap/less/bootstrap.less" rel="stylesheet/less"> type="text/css"/>
-    <link href="http://bootswatch.com/{{theme}}/variables.less" rel="stylesheet/less" type="text/css"/>
 
-    <script type="text/javascript">
-        less = {
-            env: "development", // or "production"
-            async: false,       // load imports async
-            fileAsync: false,   // load imports async when in a page under
-            // a file protocol
-            poll: 1000,         // when in watch mode, time in ms between polls
-            functions: {},      // user functions, keyed by name
-            dumpLineNumbers: "comments", // or "mediaQuery" or "all"
-            relativeUrls: false
-        };
-
-    </script>
-    <script src="/bower_components/less/dist/less-1.6.0.min.js"></script>
-    <script>less.watch();</script>
     <div class="container">
         <div class="page-header" id="banner">
             <div class="row">
@@ -28,8 +13,7 @@
             </div>
         </div>
         
-        <!-- Navbar
-================================================== -->
+        <!-- Navbar -->
         <div class="bs-docs-section clearfix">
             <div class="row">
                 <div class="col-lg-12">
@@ -1072,3 +1056,18 @@
         </footer>
     </div>
 </div>
+
+<script src="/scripts/controllers/ThemeCtrl.js"></script>
+<script type="text/javascript">
+    less = {
+        env: "development", // or "production"
+        async: false,       // load imports async
+        fileAsync: false,   // load imports async when in a page under
+        // a file protocol
+        poll: 1500,         // when in watch mode, time in ms between polls
+        dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+        relativeUrls: false,
+        watchMode: true
+    };
+</script>
+<script src="/bower_components/less/dist/less-1.6.0.min.js"></script>

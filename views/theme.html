@@ -1,7 +1,23 @@
 <script src="/scripts/controllers/ThemeCtrl.js"></script>
 <div ng-controller="ThemeCtrl">
-    <link href="//netdna.bootstrapcdn.com/bootswatch/latest/{{theme}}/bootstrap.min.css" rel="stylesheet"/>
-    
+    <link href="/bower_components/bootstrap/less/bootstrap.less" rel="stylesheet/less"> type="text/css"/>
+    <link href="http://bootswatch.com/{{theme}}/variables.less" rel="stylesheet/less" type="text/css"/>
+
+    <script type="text/javascript">
+        less = {
+            env: "development", // or "production"
+            async: false,       // load imports async
+            fileAsync: false,   // load imports async when in a page under
+            // a file protocol
+            poll: 1000,         // when in watch mode, time in ms between polls
+            functions: {},      // user functions, keyed by name
+            dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+            relativeUrls: false
+        };
+
+    </script>
+    <script src="/bower_components/less/dist/less-1.6.0.min.js"></script>
+    <script>less.watch();</script>
     <div class="container">
         <div class="page-header" id="banner">
             <div class="row">

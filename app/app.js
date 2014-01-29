@@ -2,11 +2,11 @@ var app = angular.module('strapize', ['ngRoute']);
 
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider.when('/theme/:themeName', {
-        templateUrl: 'views/theme.html'
+        templateUrl: 'templates/theme.html'
     });
 
     $routeProvider.when('/', {
-        templateUrl: 'views/home.html'
+        templateUrl: 'templates/home.html'
     });
 });
 

@@ -11,19 +11,10 @@
     text-align: center
 }
 
-.navbar-strapize {
-    background: #2B5270;
-    border-bottom: none;
-}
-
-.navbar-strapize a {
-    color: white !important;
-}
-
 .navbar-strapize .navbar-brand {
     background: url(/assets/img/strapize-logo-type.png);
     background-repeat: no-repeat;
-    width: 104px;
+    width: 120px;
     margin: 8px 10px 0;
     height: 40px;
 }

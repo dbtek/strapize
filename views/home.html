@@ -28,7 +28,7 @@
             <div ng-repeat="theme in bootswatchThemes" class="theme col-lg-3 col-md-4 col-sm-6">
                 <div class="thumbnail">
                     <div class="image">
-                        <a href="sidebar/"><img src="{{theme.thumbnail}}" class="img-responsive" alt="{{theme.name}}"></a>
+                        <a href="#theme/{{theme.name|lowercase}}"><img src="{{theme.thumbnail}}" class="img-responsive" alt="{{theme.name}}"></a>
                     </div>
                     <div class="caption text-center">
                         <a href="#theme/{{theme.name|lowercase}}" class="btn btn-primary btn-block">

@@ -35,12 +35,13 @@
 .toolbox {
   position: fixed !important;
   top: 100px;
-  padding-left: 15px;
-  background-color: white;
+  padding: 10px 15px 0;
+  background-color: #ecf0f1;
   min-height: 500px !important;
   color: #2c3e50;
   border-radius: 4px;
   opacity: 0.8;
+  box-shadow: 0 0 6px #888888;
 }
 
 .jPicker.Container {

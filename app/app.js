@@ -5,8 +5,12 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: 'templates/theme.html'
     });
 
-    $routeProvider.when('/', {
+    $routeProvider.when('/home', {
         templateUrl: 'templates/home.html'
+    });
+
+    $routeProvider.when('/', {
+        templateUrl: 'templates/wait.html'
     });
 });
 

@@ -11,6 +11,10 @@
     text-align: center
 }
 
+#promote { margin: 20px 0 0; }
+
+#header .description { margin: 20px 0 20px; }
+
 .navbar-strapize .navbar-brand {
     background: url(/assets/img/strapize-logo-type.png);
     background-repeat: no-repeat;

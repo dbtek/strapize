@@ -1,6 +1,4 @@
 <div ng-controller="ThemeCtrl" class="row">
-  <link ng-href="/assets/components/bootswatch/{{theme}}/bootswatch.less" type="text/css" rel="stylesheet/less"/>
-  <link ng-href="/assets/components/bootswatch/{{theme}}/variables.less" type="text/css" rel="stylesheet/less"/>
 
   <div class="col-sm-4 customizer">
 
@@ -19,3 +17,12 @@
   <div class="col-sm-8" ng-include="'/templates/partials/preview.html'">
   </div>
 </div>
+
+<script>
+  var theme = location.hash.split('/')[2];
+  $('head').append('<link href="/assets/components/bootswatch/'+theme+'/variables.less" type="text/css" rel="stylesheet/less"/>');
+  $('head').append('<link href="/assets/components/bootswatch/'+theme+'/bootswatch.less" type="text/css" rel="stylesheet/less"/>');
+  less.sheets.push($('link[rel="stylesheet/less"]')[1]);
+  less.sheets.push($('link[rel="stylesheet/less"]')[2]);
+  less.refresh();
+</script>

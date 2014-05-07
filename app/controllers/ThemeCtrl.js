@@ -34,7 +34,8 @@ function ThemeCtrl($scope, $routeParams, $http){
 		var variables = [];
     // is it variable?
 		if(rule.name && rule.name.indexOf('@') > -1) {
-			variables.push(rule);
+      var filename = rule.currentFileInfo.filename.split(rule.currentFileInfo.currentDirectory)[1];
+			variables.push({rule:rule, filename: filename});
 		}
 		if(rule.root) {
 			angular.forEach(rule.root.rules, function(nestedRule) {
@@ -44,6 +45,16 @@ function ThemeCtrl($scope, $routeParams, $http){
     return variables;
 	};
 
+  var groupVariables = function(variables) {
+    var groupedVars = {};
+    angular.forEach(variables, function(variable) {
+      if(!groupedVars[variable.filename])
+        groupedVars[variable.filename] = [];
+      groupedVars[variable.filename].push(variable.rule);
+    })
+    return groupedVars;
+  };
+
   $scope.tryParseLess = function() {
   	if(!$scope.resourceLock.bootswatchLess && !$scope.resourceLock.bootswatchVariables && $scope.bootstrapLessContent)
 	  	$scope.lessParser.parse($scope.bootstrapLessContent, function(error, result) {
@@ -52,7 +63,7 @@ function ThemeCtrl($scope, $routeParams, $http){
 					// import rule
 					variables = variables.concat(getVariables(rule));
 				});
-        console.log(variables);
+        $scope.variableGroups = groupVariables(variables);
 			});
   };
 

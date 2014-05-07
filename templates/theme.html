@@ -3,13 +3,19 @@
   <link ng-href="/assets/components/bootswatch/{{theme}}/variables.less" type="text/css" rel="stylesheet/less"/>
 
   <div class="col-sm-4 customizer">
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="(color,value) in customizer.colors">
-        {{color}}: {{value}}
-      </li>
-    </ul>
+
+    <div class="panel panel-default" ng-repeat="(group,variables) in variableGroups">
+      <div class="panel-heading">{{group}}</div>
+      <div class="panel-body">
+        <ul class="list-unstyled" ng-repeat="variable in variables">
+          <li>
+            {{variable.name}}
+          </li>
+        <ul>
+      </div>
+    </div>
   </div>
-  
+
   <div class="col-sm-8" ng-include="'/templates/partials/preview.html'">
   </div>
 </div>

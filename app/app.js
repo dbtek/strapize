@@ -1,4 +1,4 @@
-var app = angular.module('strapize', ['ngRoute']);
+var app = angular.module('strapize', ['ngRoute', 'ngResource']);
 
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider.when('/theme/:themeName', {

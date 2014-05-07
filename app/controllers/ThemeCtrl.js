@@ -1,4 +1,4 @@
-function ThemeCtrl($scope, $routeParams, $resource, $http){
+function ThemeCtrl($scope, $routeParams, $http){
 
   $scope.theme = $routeParams.themeName;
 

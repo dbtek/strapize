@@ -1,9 +1,6 @@
-<script src="app/controllers/ThemeCtrl.js"></script>
-<script src="assets/res/jpicker/jpicker-1.1.6.min.js"></script>
-<link href="assets/res/jpicker/css/jPicker-1.1.6.min.css" rel="stylesheet"/>
-
 <div ng-controller="ThemeCtrl" class="row">
-  <link href="{{theme.cssCdn}}" rel="stylesheet"/>
+  <link ng-href="/assets/components/bootswatch/{{theme}}/bootswatch.less"  type="text/css" rel="stylesheet/less"/>
+  <link ng-href="/assets/components/bootswatch/{{theme}}/variables.less"  type="text/css" rel="stylesheet/less"/>
 
   <nav class="navbar navbar-inverse navbar-strapize navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -1165,7 +1162,5 @@
     </div>
 
   </div>
-
-  <ng-include src="'templates/toolbox.html'" class="col-sm-4 col-md-3 toolbox" ></ng-include>
 
 </div>

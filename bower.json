@@ -20,10 +20,11 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.3",
-    "angular": "~1.2.6",
-    "angular-route": "~1.2.6",
-    "less": "~1.6.0"
+    "bootstrap": "~3.1.1",
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "bootswatch": "~3.1.1",
+    "less": "latest"
   },
   "main": "app/app.js"
 }

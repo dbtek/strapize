@@ -32,17 +32,16 @@ function ThemeCtrl($scope, $routeParams, $http){
 	 */
 	var getVariables = function(rule) {
 		var variables = [];
-		if(rule.name) {
-			//console.log(rule.name, rule.value);
-			variables.push(rule)
-			return variables;
+    // is it variable?
+		if(rule.name && rule.name.indexOf('@') > -1) {
+			variables.push(rule);
 		}
 		if(rule.root) {
 			angular.forEach(rule.root.rules, function(nestedRule) {
-				variables.concat(getVariables(nestedRule));
+				variables = variables.concat(getVariables(nestedRule));
 			});
-			return variables;
 		}
+    return variables;
 	};
 
   $scope.tryParseLess = function() {
@@ -51,8 +50,9 @@ function ThemeCtrl($scope, $routeParams, $http){
 	  		var variables = [];
 				angular.forEach(result.rules, function(rule) {
 					// import rule
-					variables.concat(getVariables(rule));
+					variables = variables.concat(getVariables(rule));
 				});
+        console.log(variables);
 			});
   };
 
